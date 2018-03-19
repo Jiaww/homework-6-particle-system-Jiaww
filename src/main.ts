@@ -249,8 +249,11 @@ function main() {
         particleSystem.setDesiredMesh(MeshDict.get(meshesName[meshId]));
       }
     }
-    if(controls.MeshRotating){
+    if(controls.camera_enabled && controls.MeshRotating){
       rotAngle += 0.005;
+    }
+    else{
+      rotAngle = 0;
     }
     // Mouse Operations
     if (controls.camera_enabled){
