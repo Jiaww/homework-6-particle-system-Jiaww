@@ -179,7 +179,7 @@ function main() {
   FF.add(controls, 'forceFieldDirectionZ', -1.0, 1.0).step(0.01);
   FF.add(controls, 'forceFieldStrength', 0.0, 50.0).step(0.25);
   FF.add(controls, 'noisePower', 0.0, 200.0);
-  let geoController = gui.add(controls, 'geometry', ['plane', 'lotus', 'suzanne', 'rose', 'bigwhite', 'key', 'pistol']).listen();
+  let geoController = gui.add(controls, 'geometry', ['plane', 'lotus', 'suzanne', 'rose', 'baymax', 'key', 'pistol']).listen();
   geoController.onFinishChange(changeMesh);
   let AR = gui.addFolder('Attractor and Repeller'); 
   AR.add(controls, 'AddAttractor');
@@ -374,7 +374,7 @@ function DownloadMeshes()
 
   obj = new ObjLoad(vec3.fromValues(0,0,0));
   obj.createdByLoader(readTextFile("./src/models/bigwhite.obj"), 30);
-  MeshDict.set('bigwhite', obj);
+  MeshDict.set('baymax', obj);
 
   obj = new ObjLoad(vec3.fromValues(0,0,0));
   obj.createdByLoader(readTextFile("./src/models/key.obj"), 30);
