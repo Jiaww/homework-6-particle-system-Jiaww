@@ -1,11 +1,34 @@
 
 # Project 6: Particle System
 
-**Goal:** to make physics-based procedural animation of particles and to practice using OpenGL's instanced rendering system.
+* ***University of Pennsylvania, CGGT***
+* ***Pennkey: jiaww***
+* ***Jiawei Wang***
+___
 
-**Inspiration:** DMD and CGGT alumnus Nop Jiarathanakul's [Particle Dream application](http://www.iamnop.com/particles/).
+## Overview:
+* **Goal:** to make physics-based procedural animation of particles and to practice using OpenGL's instanced rendering system.
+* [**Demo Link**](https://jiaww.github.io/homework-6-particle-system-Jiaww/)
+* **Final Results**:
 
-## Particle collection (30 points)
+|**Final Result (Number of Particles = 25x25x25 )**|
+|---|
+|<img src="./results/final.gif" width="800" height="600">|
+
+## Features:
+### Particle collection
+* I create a class `ParticleSystem` to simulate the movement of the particles. It contains following info:
+  ``` javascript
+    numParticles: number; // total number of particles
+    offsets: Array<number> = []; // current positions of particles
+    offsetsDesired: Array<number> = []; // disired positions of particles
+    vels: Array<vec3> = []; // current velocities of particles
+    accs: Array<vec3> = []; // current accelerations of particles
+    masses: Array<number> = []; // masses of particles
+    maxVel: number = 20; // maximum velocity the particle can have
+  ```
+* I use basic *Euler Integration* Method to compute the state of particle system.
+* Before each update, compute all the forces and then get the current accelerations 
 Add whatever code you feel is necessary to your Typescript files to support a collection of particles that move over time and interact with various forces in the environment. Something like a `Particle` class could be helpful, but is not strictly necessary. At minimum, each particle should track position, velocity, and acceleration, and make use of an accurate time step value from within `main.ts`'s `tick()` function. You may use any integration method you see fit, such as Euler, Verlet, or Runge-Kutta.
 
 You'll probably want to test your code on a small set of particles at first, and with some simple directional forces just to make sure your particles move
