@@ -13,11 +13,11 @@ ___
 
 |**Final Result (Number of Particles = 25x25x25 )**|
 |---|
-|<img src="./results/final.gif" width="800" height="600">|
+|<img src="./results/final.gif" width="1000" height="600">|
 
 |**Mouse Interactions**|
 |---|
-|<img src="./results/interaction.gif" width="800" height="600">|
+|<img src="./results/interaction.gif" width="1000" height="600">|
 
 
 ## Features:
